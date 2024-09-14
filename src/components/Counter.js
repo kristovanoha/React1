@@ -6,7 +6,7 @@ function Counter() {
   return (
     <div>
       <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Citac</button>
+      <button onClick={() => setCount(count + 1)}>Citadd</button>
       <br>
       </br>
       Konecs
