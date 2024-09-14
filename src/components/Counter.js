@@ -9,7 +9,7 @@ function Counter() {
       <button onClick={() => setCount(count + 1)}>Pocitej skvele</button>
       <br>
       </br>
-      Konecs
+      Develop vetev
     </div>
   );
 }
