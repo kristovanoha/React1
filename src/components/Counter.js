@@ -6,7 +6,7 @@ function Counter() {
   return (
     <div>
       <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Pocitejss</button>
+      <button onClick={() => setCount(count + 1)}>Pocitej skvele</button>
       <br>
       </br>
       Konecs
