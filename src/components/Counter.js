@@ -6,7 +6,7 @@ function Counter() {
   return (
     <div>
       <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Pocitej skvele</button>
+      <button onClick={() => setCount(count + 1)}>Priscti</button>
       <br>
       </br>
       Develop vetev
