@@ -1,7 +1,10 @@
-import React , {  useEffect }from "react";
+import React , {  useContext, useEffect }from "react";
+import { ContextMain } from "../context/ContextMain"; // Aktualizovaný import
+
 
 function Counter() {
-  const [count, setCount] = React.useState(0);
+
+  const { count, incrementCount } = useContext(ContextMain);
 
 // Použití useEffect
 useEffect(() => {
@@ -13,7 +16,8 @@ useEffect(() => {
 // Funkce, která se spustí při kliknutí na tlačítko
 const handleClick = () => {
   console.log('Kliknuto na tlačítko');
-  setCount(count + 1);
+ // setCount(count + 1);
+  incrementCount();
 };
 
   return (

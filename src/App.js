@@ -4,9 +4,11 @@ import Prvni from "./pages/Prvni";
 import Treti from "./pages/Treti";
 import Pet from "./pages/Pet";
 import Header from "./components/Header";
+import { ContextMainProvider } from "./context/ContextMain"; // Aktualizovaný import
 
 function App() {
   return (
+    <ContextMainProvider>
     <Router>
       {/* Header se zobrazí na každé stránce */}
       <Header />
@@ -20,6 +22,7 @@ function App() {
         {/* <Route path="/druha" element={<Druha />} /> */}
       </Routes>
     </Router>
+    </ContextMainProvider>
   );
 }
 
