@@ -4,7 +4,7 @@ class TextInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      inputValue: "", // Stav pro hodnotu vstupu
+      inputValue: props.value || "", // Stav pro hodnotu vstupu
       errorMessage: "" // Stav pro chybovou zprávu
     };
   }

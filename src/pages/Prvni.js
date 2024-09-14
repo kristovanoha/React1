@@ -7,24 +7,23 @@ import { ContextMain } from "../context/ContextMain";
 
 
 function Prvni() {
-    const [hodnotaInputu, setHodnotaInputu] = useState(""); 
+    const { nazev, updateNazev } = useContext(ContextMain);
+    // const [hodnotaInputu, setHodnotaInputu] = useState(""); 
    //const [nazev, updateNazev] = useContext(ContextMain) ;
 
     const handleValueChange = (value) => {
-           //this.setState({ textValue: value });
         console.log('VALUE ', value);
-        //updateNazev(value);
-        setHodnotaInputu(value);
+       updateNazev(value); // Aktualizujeme hodnotu `nazev` v kontextu
     };
 
     return (
         <div>
             <h1>Hello World x!</h1>
 
-            <TextInput labelName="Popisek" onValueChange={handleValueChange}></TextInput>
+            <TextInput labelName="Popisek" value={nazev} onValueChange={handleValueChange}></TextInput>
             <br></br>
             <Counter />
-            <div>Hodnota z textboxu {hodnotaInputu}</div>
+            <div>Hodnota z textboxu {nazev}</div>
         </div>
     );
 }
