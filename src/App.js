@@ -1,20 +1,25 @@
 import React from "react";
-import Counter from "./components/Counter"; // Importujeme Counter z nové složky
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Prvni from "./pages/Prvni";
+import Treti from "./pages/Treti";
+import Pet from "./pages/Pet";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Klikni sem pro React dokumentaci
-      </a>
-      <Counter /> {/* Přidáme komponentu Counter */}
-    </div>
+    <Router>
+      {/* Header se zobrazí na každé stránce */}
+      <Header />
+      
+      {/* Definice jednotlivých stránek */}
+      <Routes>
+        <Route path="/" element={<Prvni />} />
+        <Route path="/treti" element={<Treti />} />
+        <Route path="/pet" element={<Pet />} />
+        <Route path="/treti2" element={<Treti />} />
+        {/* <Route path="/druha" element={<Druha />} /> */}
+      </Routes>
+    </Router>
   );
 }
 
