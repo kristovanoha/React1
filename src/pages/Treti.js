@@ -1,6 +1,7 @@
 import React from "react";
 import Label from "../components/Label"; 
 import Counter from "../components/Counter";
+import CounterAdvanced from "../components/CounterAdvanced";
 
 function Treti() {
   return (
@@ -9,6 +10,7 @@ function Treti() {
       <Label name="Komponeta labale" />
       <p>Vítejte na druhé stránce naší aplikace.</p>
       <Counter></Counter>
+      <CounterAdvanced/>
     </div>
   );
 }
