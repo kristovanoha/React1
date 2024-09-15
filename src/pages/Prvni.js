@@ -1,10 +1,12 @@
-import React, {useCallback, useContext, useState} from "react";
+import React, {useCallback, useContext, useState, lazy,Suspense} from "react";
 import Counter from "../components/Counter";
 import TextInput from "../components/TextInput";
 import { ContextMain } from "../context/ContextMain";
 import Timer from "../components/Timer";
+//import LazyTest from "../components/LazyTest";
+import { delay } from "../utils/delay";
 
-
+const LazyTest = lazy(() => delay(5000).then(() => import("../components/LazyTest")));
 
 function Prvni() {
     const { nazev, updateNazev } = useContext(ContextMain);
@@ -24,7 +26,10 @@ function Prvni() {
             <br></br>
             <Counter />
             <div>Hodnota z textboxu {nazev}</div>
-            <Timer/>
+            <Timer />
+            <Suspense fallback={<div>Načítání komponenty...</div>}>
+                <LazyTest />
+            </Suspense>
         </div>
     );
 }

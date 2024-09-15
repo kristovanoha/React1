@@ -15,7 +15,7 @@ function App() {
       
       {/* Definice jednotlivých stránek */}
       <Routes>
-        <Route path="/" element={<Prvni />} />
+        <Route path="/prvni" element={<Prvni />} />
         <Route path="/treti" element={<Treti />} />
         <Route path="/pet" element={<Pet />} />
         <Route path="/treti2" element={<Treti />} />

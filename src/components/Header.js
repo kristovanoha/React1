@@ -7,7 +7,7 @@ function Header() {
       <h2>Hlavicka</h2>
       <nav>
         <ul>
-          <li><Link to="/">První stránka</Link></li>
+          <li><Link to="/prvni">První stránka</Link></li>
           <li><Link to="/pet">PET stránka</Link></li>
           <li><Link to="/treti">Treti stránka</Link></li>
           <li><Link to="/treti2">Treti stránka2</Link></li>
