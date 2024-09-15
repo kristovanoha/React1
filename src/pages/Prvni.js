@@ -5,6 +5,8 @@ import { ContextMain } from "../context/ContextMain";
 import Timer from "../components/Timer";
 //import LazyTest from "../components/LazyTest";
 import { delay } from "../utils/delay";
+import LabelNew from "../components/LabelNew";
+import LabelNew2 from "../components/LabelNew2";
 
 const LazyTest = lazy(() => delay(5000).then(() => import("../components/LazyTest")));
 
@@ -30,6 +32,9 @@ function Prvni() {
             <Suspense fallback={<div>Načítání komponenty...</div>}>
                 <LazyTest />
             </Suspense>
+            <LabelNew  /><br />
+            <LabelNew nazev="juda" /><br />
+            <LabelNew2 hodnota="6" nazev="ODVO"  />
         </div>
     );
 }
