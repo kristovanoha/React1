@@ -52,4 +52,4 @@ class TextInput extends Component {
   }
 }
 
-export default TextInput;
+export default React.memo(TextInput);

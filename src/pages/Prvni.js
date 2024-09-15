@@ -1,8 +1,8 @@
-import React, {useContext, useState} from "react";
+import React, {useCallback, useContext, useState} from "react";
 import Counter from "../components/Counter";
 import TextInput from "../components/TextInput";
 import { ContextMain } from "../context/ContextMain";
-
+import Timer from "../components/Timer";
 
 
 
@@ -11,10 +11,10 @@ function Prvni() {
     // const [hodnotaInputu, setHodnotaInputu] = useState(""); 
    //const [nazev, updateNazev] = useContext(ContextMain) ;
 
-    const handleValueChange = (value) => {
+    const handleValueChange = useCallback((value) => {
         console.log('VALUE ', value);
        updateNazev(value); // Aktualizujeme hodnotu `nazev` v kontextu
-    };
+    },[updateNazev]);
 
     return (
         <div>
@@ -24,6 +24,7 @@ function Prvni() {
             <br></br>
             <Counter />
             <div>Hodnota z textboxu {nazev}</div>
+            <Timer/>
         </div>
     );
 }
