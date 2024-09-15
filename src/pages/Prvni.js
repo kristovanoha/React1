@@ -7,6 +7,8 @@ import Timer from "../components/Timer";
 import { delay } from "../utils/delay";
 import LabelNew from "../components/LabelNew";
 import LabelNew2 from "../components/LabelNew2";
+import {utilHodnota} from "../utils/delay";
+import Lifting from "../components/Lifting";
 
 const LazyTest = lazy(() => delay(5000).then(() => import("../components/LazyTest")));
 
@@ -34,7 +36,9 @@ function Prvni() {
             </Suspense>
             <LabelNew  /><br />
             <LabelNew nazev="juda" /><br />
-            <LabelNew2 hodnota="6" nazev="ODVO"  />
+            <LabelNew2 hodnota="6" nazev="ODVO"  /><br />
+            Util hodnota {utilHodnota}
+                    <Lifting />
         </div>
     );
 }
