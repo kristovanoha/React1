@@ -11,6 +11,8 @@ function Header() {
           <li><Link to="/pet">PET stránka</Link></li>
           <li><Link to="/treti">Treti stránka</Link></li>
           <li><Link to="/treti2">Treti stránka2</Link></li>
+          <li><Link to="/dataList">Data seznam</Link></li>
+          
           {/* <li><Link to="/druha">Druhá stránka</Link></li> */}
         </ul>
       </nav>
