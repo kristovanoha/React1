@@ -1,0 +1,9 @@
+/* src/styles/App.scss */
+@import './variables';  // Import Sass proměnných
+
+
+.ruda {
+  font-size: 2rem;
+  color: $primary-color;  // Použití proměnné z _variables.scss
+  font-weight: bold;
+}

@@ -6,6 +6,7 @@ import Pet from "./pages/Pet";
 import Header from "./components/Header";
 import { ContextMainProvider } from "./context/ContextMain"; // Aktualizovaný import
 import DataList from "./components/DataList";
+import Vzor from "./pages/Vzor";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/pet" element={<Pet />} />
         <Route path="/treti2" element={<Treti />} />
         <Route path="/dataList" element={<DataList />} />
+        <Route path="/vzor" element={<Vzor />} />
         {/* <Route path="/druha" element={<Druha />} /> */}
       </Routes>
     </Router>

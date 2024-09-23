@@ -1,0 +1,5 @@
+.bigYellowText {
+    font-size: 2rem;  /* Velké písmo */
+    color: red;    /* Žlutá barva */
+    font-weight: bold; /* Může být volitelné, pokud chcete tučný text */
+  }
